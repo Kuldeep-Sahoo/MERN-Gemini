@@ -10,8 +10,9 @@ app.use(express.json());
 app.post("/", async (req, res) => {
   try {
     const prompt = req.body.prompt;
+    console.log("user :: ", prompt);
     const result = await model.generateContent(prompt);
-    console.log(result.response.text());
+    console.log("bot :: ", result.response.text());
     res.send({ message: result.response.text() });
   } catch (error) {
     console.log(error.message);
@@ -25,4 +26,3 @@ const port = process.env.PORT || 5000;
 app.listen(port, (req, res) => {
   console.log(`App is running og on port ${port}`.bgGreen.red);
 });
-
