@@ -1,0 +1,21 @@
+
+# Node modules
+node_modules/
+backend/node_modules/
+
+# Logs and temp files
+*.log
+.DS_Store
+*.tmp
+
+# Package lock files (optional)
+package-lock.json
+backend/package-lock.json
+
+# Environment files
+.env
+backend/.env
+
+# IDE and temporary files
+.cph/
+*.prob
